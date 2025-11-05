@@ -8,6 +8,7 @@ import { TanStackDevtools } from '@tanstack/react-devtools'
 import TanStackQueryDevtools from '../integrations/tanstack-query/devtools'
 
 import appCss from '../styles.css?url'
+import { seo } from '../utils/seo'
 import type { QueryClient } from '@tanstack/react-query'
 
 interface MyRouterContext {
@@ -27,6 +28,14 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
       {
         title: 'Start',
       },
+      ...seo({
+        title: 'Start - Build Amazing Applications',
+        description:
+          'A modern starter template with TanStack Router, React, and TypeScript',
+        keywords: 'react, typescript, tanstack, router, web development',
+        author: 'Muhtasim Fuad',
+        type: 'website',
+      }),
     ],
     links: [
       {

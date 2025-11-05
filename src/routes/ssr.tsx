@@ -13,8 +13,8 @@ function RouteComponent() {
     <>
       {punkSongs.map((song) => (
         <li key={song.id}>
-          <span className="text-lg text-white font-medium">{song.name}</span>
-          <span className="text-white/60"> - {song.artist}</span>
+          <span className="text-lg font-medium">{song.name}</span>
+          <span> - {song.artist}</span>
         </li>
       ))}
     </>

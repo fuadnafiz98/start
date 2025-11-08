@@ -10,7 +10,13 @@ function App() {
   const [spellCheck, setSpellCheck] = useState(true)
   const [showNotification, setShowNotification] = useState(false)
 
-  const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0
+  const getWordCount = () => {
+    const parts = text.split('---')
+    const relevantText = parts.length > 1 ? parts[parts.length - 1] : text
+    return relevantText.trim() ? relevantText.trim().split(/\s+/).length : 0
+  }
+
+  const wordCount = getWordCount()
 
   const handleCopy = () => {
     navigator.clipboard.writeText(text)

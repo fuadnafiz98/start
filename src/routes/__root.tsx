@@ -3,9 +3,6 @@ import {
   Scripts,
   createRootRouteWithContext,
 } from '@tanstack/react-router'
-import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
-import { TanStackDevtools } from '@tanstack/react-devtools'
-import TanStackQueryDevtools from '../integrations/tanstack-query/devtools'
 
 import appCss from '../styles.css?url'
 import { seo } from '../utils/seo'
@@ -82,7 +79,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
-        {import.meta.env.PROD && (
+        {/* {import.meta.env.PROD && (
           <TanStackDevtools
             config={{
               position: 'bottom-right',
@@ -95,7 +92,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
               TanStackQueryDevtools,
             ]}
           />
-        )}
+        )} */}
         <Scripts />
       </body>
     </html>
